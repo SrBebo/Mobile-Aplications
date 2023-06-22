@@ -8,7 +8,6 @@ class MySecondWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final args = ModalRoute.of(context)!.settings.arguments as WidgetArgument;
 
     return Scaffold(
