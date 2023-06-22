@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:routes_example/beans/widget_argument.dart';
 
 class MyFirstWidget extends StatelessWidget {
   static const routeName = '/';
@@ -15,7 +16,14 @@ class MyFirstWidget extends StatelessWidget {
         child: ElevatedButton(
           child: const Text("Press ME!"),
           onPressed: () => {
-            Navigator.pushNamed(context, '/second'),
+            Navigator.pushNamed(
+              context, 
+              '/second', 
+              arguments: WidgetArgument(
+                'Mi segundo widget', 
+                'Este mensaje es dinamico'
+              )
+            ),
           },
         ),
       ),
