@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Routes Application",
         //home: MyFirstWidget(),
-        initialRoute: '/',
+        initialRoute: MyFirstWidget.routeName,
         routes: {
-          '/': (context) => const MyFirstWidget(),
-          '/second': (context) => const MySecondWidget(),
+          MyFirstWidget.routeName: (context) => const MyFirstWidget(),
+          MySecondWidget.routeName: (context) => const MySecondWidget(),
         }
     );
   }
