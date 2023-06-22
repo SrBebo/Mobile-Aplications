@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:routes_example/beans/widget_argument.dart';
 
 class MyFirstWidget extends StatelessWidget {
-  static const routeName = '/';
-
+  static const routeName = "/";
   const MyFirstWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My first widget"),
+        title: const Text("My first Widget"),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text("Press ME!"),
+        child: IconButton(
+          icon: const FaIcon(FontAwesomeIcons.mugSaucer),
           onPressed: () => {
             Navigator.pushNamed(
-              context, 
-              '/second', 
+              context,
+              '/second',
               arguments: WidgetArgument(
-                'Mi segundo widget', 
-                'Este mensaje es dinamico'
-              )
+                  'Este mensaje es dinamico', 'My segundo Widget'),
             ),
           },
         ),
