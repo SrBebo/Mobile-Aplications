@@ -7,14 +7,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Routes Application",
         //home: MyFirstWidget(),
-        initialRoute: MyFirstWidget.routeName,
+        //initialRoute: MyFirstWidget.routeName,
         routes: {
           MyFirstWidget.routeName: (context) => const MyFirstWidget(),
           MySecondWidget.routeName: (context) => const MySecondWidget(),
