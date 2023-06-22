@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:routes_example/beans/widget_argument.dart';
 
 class MySecondWidget extends StatelessWidget {
   static const routeName = '/second';
@@ -7,12 +8,15 @@ class MySecondWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final args = ModalRoute.of(context)!.settings.arguments as WidgetArgument;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second widget"),
+        title: Text(args.title),
       ),
-      body: const Center(
-        child: Text("My Second widget"),
+      body: Center(
+        child: Text(args.message),
       ),
     );
   }
